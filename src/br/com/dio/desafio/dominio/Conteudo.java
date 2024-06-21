@@ -24,4 +24,6 @@ public abstract class Conteudo {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+    public abstract String toString();
 }

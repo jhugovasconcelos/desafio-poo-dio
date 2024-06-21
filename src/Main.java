@@ -51,12 +51,12 @@ public class Main {
         devJoao.inscreverBootcamp(bootcamp);
         System.out.println("Conteúdos Inscritos João:" + devJoao.getConteudosInscritos());
         devJoao.progredir();
-        devJoao.progredir();
-        devJoao.progredir();
         System.out.println("-");
         System.out.println("Conteúdos Inscritos João:" + devJoao.getConteudosInscritos());
         System.out.println("Conteúdos Concluidos João:" + devJoao.getConteudosConcluidos());
         System.out.println("XP:" + devJoao.calcularTotalXp());
+
+        // TODO: forma de dar votos positivos e negativos para os outros
 
     }
 
