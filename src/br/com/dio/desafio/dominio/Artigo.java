@@ -61,11 +61,12 @@ public class Artigo extends Conteudo {
 
     @Override
     public String toString() {
-        return String.format("Título: %s%n " +
-                "Autor: %s%n " +
-                "Número de linhas: %d%n " +
-                "Votos Positivos: %d%n " +
-                "Votos Negativos: %d",
+        return String.format( "Artigo {" +
+                "Título: %s " +
+                ", Autor: %s " +
+                ", Número de linhas: %d" +
+                ", Votos Positivos: %d " +
+                ", Votos Negativos: %d }",
                 this.titulo,this.autor.getNome(),this.numerolinhas, contarVotosPositivos(), contarVotosNegativos());
     }
 

@@ -55,13 +55,13 @@ public class Main {
         devJoao.progredir();
         System.out.println("-");
         System.out.println("Conteúdos Inscritos João:" + devJoao.getConteudosInscritos());
-        System.out.println("Conteúdos Concluidos João:" + devJoao.getConteudosConcluidos());
+        System.out.println("Conteúdos Concluídos João:" + devJoao.getConteudosConcluidos());
         System.out.println("XP:" + devJoao.calcularTotalXp());
 
         // TODO: forma de dar votos positivos e negativos para os outros
         devJoao.escreverArtigo("O que eu aprendi sobre Java", 20);
         devCamila.votarArtigo("O que eu aprendi sobre Java",'+');
-        System.out.println("Conteúdos Concluidos João:" + devJoao.getConteudosConcluidos());
+        System.out.println("Conteúdos Concluídos João:" + devJoao.getConteudosConcluidos());
         System.out.println("XP:" + devJoao.calcularTotalXp());
     }
 
