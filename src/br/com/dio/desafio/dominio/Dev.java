@@ -22,6 +22,22 @@ public class Dev {
         }
     }
 
+    public void escreverArtigo(String titulo, int numeroLinhas){
+        Artigo artigo = new Artigo();
+        artigo.setTitulo(titulo);
+        artigo.setNumerolinhas(numeroLinhas);
+        artigo.setAutor(this);
+        this.conteudosConcluidos.add(artigo);
+        Plataforma plataforma = Plataforma.getInstance();
+        plataforma.inserirArtigo(artigo);
+    }
+
+    public void votarArtigo(String titulo, Character valor){
+        Plataforma plataforma = Plataforma.getInstance();
+        Artigo artigo = plataforma.acharArtigo(titulo);
+        artigo.receberVoto(this, valor);
+    }
+
     public double calcularTotalXp() {
         Iterator<Conteudo> iterator = this.conteudosConcluidos.iterator();
         double soma = 0;
@@ -29,12 +45,9 @@ public class Dev {
             double next = iterator.next().calcularXp();
             soma += next;
         }
+
         return soma;
 
-        /*return this.conteudosConcluidos
-                .stream()
-                .mapToDouble(Conteudo::calcularXp)
-                .sum();*/
     }
 
 
